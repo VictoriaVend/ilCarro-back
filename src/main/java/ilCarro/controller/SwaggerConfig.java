@@ -27,7 +27,7 @@ public class SwaggerConfig {
     private ApiInfo apiEndPointsInfo() {
         return new ApiInfoBuilder().title("Il Carro")
                 .description("REST API")
-                .contact(new Contact("", "", ""))
+                .contact(new Contact("Arthur Khachaturian", "", ""))
                 .version("1.0-SNAPSHOT")
                 .build();
     }
