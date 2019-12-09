@@ -2,7 +2,6 @@ package ilcarro.controller.impl;
 
 import ilcarro.exception.NotImplementedException;
 import ilcarro.view.user.UserFullView;
-import ilcarro.view.user.UserView;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @Api(tags = {"UserLogin"})
 public class UserLoginController {
         @GetMapping(value = "/")
-        @ApiOperation(value = "login", response = UserFullView.class, tags = {"login"})
+        @ApiOperation(value = "login", response = UserFullView.class, tags = {"UserLogin"})
         @ApiResponses(value = {@ApiResponse(code = 200, message = "OK"), @ApiResponse(code = 401, message = "Unauthorized")
         })
         public ResponseEntity<UserFullView> getCurrentCapacityById (@RequestBody final UserFullView userView) {
