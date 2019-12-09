@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/user/login", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 @Api(tags = {"UserLogin"})
 public class UserLoginController {
-        @PostMapping(value = "/")
+        @GetMapping(value = "/")
         @ApiOperation(value = "login", response = UserFullView.class, tags = {"login"})
         @ApiResponses(value = {
                 @ApiResponse(code = 200, message = "OK"),
