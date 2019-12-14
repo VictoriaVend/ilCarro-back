@@ -24,7 +24,7 @@ public class CarView {
     private Integer doors;
     private Integer seats;
     private BigDecimal fuelConsumption;
-    // todo "features":[],
+    // TODO "features":[],
     private CarClassType carClass;
     private PriceView pricePerDay;
     private Integer distanceIncluded;
