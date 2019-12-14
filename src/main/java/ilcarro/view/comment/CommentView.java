@@ -13,7 +13,7 @@ import java.time.LocalDate;
  */
 @Getter
 @Setter
-public class CommentView {
+public class CommentView extends CommentShortView {
     private String firstName;
     private String secondName;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = LocalDateDeserializer.PATTERN)

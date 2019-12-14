@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 public class CarView {
-    private String serial_number;
+    private String serialNumber;
     private String make;
     private String model;
     private Integer year;
@@ -29,6 +29,6 @@ public class CarView {
     private PriceView pricePerDay;
     private Integer distanceIncluded;
     private String about;
-    private PickUpPlaceView pick_up_place;
+    private PickUpPlaceView pickUpPlace;
     private List<String> imageUrls = new ArrayList<>();
 }

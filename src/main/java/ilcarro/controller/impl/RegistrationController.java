@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 @RequestMapping(value = "/registration", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 @Api(tags = {"registration"})
-public class RegistraionController {
+public class RegistrationController {
     @PostMapping(value = "/")
     @ApiOperation(value = "Register new user", response = UserFullView.class, tags = {"registration"})
     @ApiResponses(value = {
