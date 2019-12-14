@@ -10,7 +10,7 @@ import static ilcarro.dto.Constants.*;
 
 @RestController("/v2")
 @CrossOrigin(origins = "*")
-@Api(description = "Car controller (Add/Update/Delete a car)")
+@Api(tags = {"Car controller (Add/Update/Delete a car)"})
 public class CarController {
     @ApiOperation("Add a new car")
     @PostMapping(ADD_CAR)

@@ -18,7 +18,7 @@ import static ilcarro.dto.Constants.*;
 
 @RestController
 @CrossOrigin(origins = "*")
-@Api(description = "Search controller (Search standart, by coordinates, by filters, by contains all searches)")
+@Api(tags = {"Search controller (Search standart, by coordinates, by filters, by contains all searches)"})
 public class SearchController {
     @ApiOperation("Search a car")
     @GetMapping(SEARCH)

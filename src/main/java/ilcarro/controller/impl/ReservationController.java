@@ -11,7 +11,7 @@ import static ilcarro.dto.Constants.*;
 
 @RestController
 @CrossOrigin(origins = "*")
-@Api(description = "Make a reservation controller (car reservation, confirm reservation)")
+@Api(tags = {"Make a reservation controller (car reservation, confirm reservation)"})
 public class ReservationController {
     @ApiOperation("Confirm payment")
     @PostMapping(CONFIRM_RESERVATION)

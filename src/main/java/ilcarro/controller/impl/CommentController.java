@@ -10,7 +10,7 @@ import static ilcarro.dto.Constants.*;
 
 @RestController
 @CrossOrigin(origins = "*")
-@Api(description = "Comment controller (post comment)")
+@Api(tags = {"Comment controller (post comment)"})
 public class CommentController {
     @ApiOperation("Post a new comment from current user")
     @PostMapping(POST_A_COMMENT)
