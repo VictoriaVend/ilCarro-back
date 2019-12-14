@@ -19,7 +19,7 @@ public class ReservationController {
             @ApiResponse(code = 200, message = "OK"),
             @ApiResponse(code = 409, message = "Conflict")
     })
-    public void confirmPayment (@RequestBody ReservationConfirmRequest reservationConfirmRequest) {
+    public void confirmPayment (@RequestBody final ReservationConfirmRequest reservationConfirmRequest) {
         throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
     }
 
@@ -30,7 +30,7 @@ public class ReservationController {
             @ApiResponse(code = 404, message = "Not Found"),
             @ApiResponse(code = 409, message = "Conflict")
     })
-    public ResponseEntity<ReservationResponse> makeAReservation (@RequestBody ReservationRequest reservationRequest ) {
+    public ResponseEntity<ReservationResponse> makeAReservation (@RequestBody final ReservationRequest reservationRequest ) {
         throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
     }
 }

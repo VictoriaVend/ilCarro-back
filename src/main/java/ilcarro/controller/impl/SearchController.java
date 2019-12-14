@@ -28,14 +28,14 @@ public class SearchController {
             @ApiResponse(code = 404, message = "Not Found")
     })
     ResponseEntity<SearchView> searchCar(
-            String city,
-            @RequestParam(name = DATE_FROM, required = false) @DateTimeFormat(pattern = "YYYY-MM-dd HH:mm") LocalDateTime from,
-            @RequestParam(name = DATE_TO, required = false) @DateTimeFormat(pattern = "YYYY-MM-dd HH:mm") LocalDateTime to,
-            @RequestParam(name = MIN_AMOUNT, required = false) BigDecimal minAmount,
-            @RequestParam(name = MAX_AMOUNT, required = false) BigDecimal maxAmount,
-            Boolean ascending,
-            @RequestParam(name = ITEMS_ON_PAGE, required = false) Integer itemsOnPage,
-            @RequestParam(name = CURRENT_PAGE, required = false) Integer currentPage
+            final String city,
+            @RequestParam(name = DATE_FROM, required = false) @DateTimeFormat(pattern = "YYYY-MM-dd HH:mm") final LocalDateTime from,
+            @RequestParam(name = DATE_TO, required = false) @DateTimeFormat(pattern = "YYYY-MM-dd HH:mm") final LocalDateTime to,
+            @RequestParam(name = MIN_AMOUNT, required = false) final BigDecimal minAmount,
+            @RequestParam(name = MAX_AMOUNT, required = false) final BigDecimal maxAmount,
+            final Boolean ascending,
+            @RequestParam(name = ITEMS_ON_PAGE, required = false) final Integer itemsOnPage,
+            @RequestParam(name = CURRENT_PAGE, required = false) final Integer currentPage
     ) {
         throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
     }
@@ -48,11 +48,11 @@ public class SearchController {
             @ApiResponse(code = 404, message = "Not Found")
     })
     ResponseEntity<SearchView> searchCarGeo(
-            BigDecimal latitude,
-            BigDecimal longitude,
-            BigDecimal radius,
-            @RequestParam(name = ITEMS_ON_PAGE, required = false) Integer itemsOnPage,
-            @RequestParam(name = CURRENT_PAGE, required = false) Integer currentPage
+            final BigDecimal latitude,
+            final BigDecimal longitude,
+            final BigDecimal radius,
+            @RequestParam(name = ITEMS_ON_PAGE, required = false) final Integer itemsOnPage,
+            @RequestParam(name = CURRENT_PAGE, required = false) final Integer currentPage
     ) {
         throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
     }
@@ -64,15 +64,15 @@ public class SearchController {
             @ApiResponse(code = 404, message = "Not Found")
     })
     ResponseEntity<SearchFilterView> searchByFilters(
-            String make,
-            String model,
-            Integer year,
-            String engine,
-            FuelType fuel,
-            GearType gear,
-            WheelsDriveType wheels_drive,
-            @RequestParam(name = ITEMS_ON_PAGE, required = false) Integer itemsOnPage,
-            @RequestParam(name = CURRENT_PAGE, required = false) Integer currentPage
+            final String make,
+            final String model,
+            final Integer year,
+            final String engine,
+            final FuelType fuel,
+            final GearType gear,
+            final WheelsDriveType wheels_drive,
+            @RequestParam(name = ITEMS_ON_PAGE, required = false) final Integer itemsOnPage,
+            @RequestParam(name = CURRENT_PAGE, required = false) final Integer currentPage
     ) {
         throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
     }
@@ -84,24 +84,24 @@ public class SearchController {
             @ApiResponse(code = 404, message = "Not Found")
     })
     ResponseEntity<SearchFilterView> searchByAllFilters(
-            @RequestParam(name = CURRENT_PAGE, required = false) Integer currentPage,
-            @RequestParam(name = ITEMS_ON_PAGE, required = false) Integer itemsOnPage,
-            WheelsDriveType wheels_drive,
-            String make,
-            String model,
-            Integer year,
-            String engine,
-            FuelType fuel,
-            GearType gear,
-            BigDecimal latitude,
-            BigDecimal longitude,
-            BigDecimal radius,
-            String city,
-            @RequestParam(name = DATE_FROM, required = false) @DateTimeFormat(pattern = "YYYY-MM-dd HH:mm") LocalDateTime from,
-            @RequestParam(name = DATE_TO, required = false) @DateTimeFormat(pattern = "YYYY-MM-dd HH:mm") LocalDateTime to,
-            @RequestParam(name = MIN_AMOUNT, required = false) BigDecimal minAmount,
-            @RequestParam(name = MAX_AMOUNT, required = false) BigDecimal maxAmount,
-            Boolean ascending
+            @RequestParam(name = CURRENT_PAGE, required = false) final Integer currentPage,
+            @RequestParam(name = ITEMS_ON_PAGE, required = false) final Integer itemsOnPage,
+            final WheelsDriveType wheels_drive,
+            final String make,
+            final String model,
+            final Integer year,
+            final String engine,
+            final FuelType fuel,
+            final GearType gear,
+            final BigDecimal latitude,
+            final BigDecimal longitude,
+            final BigDecimal radius,
+            final String city,
+            @RequestParam(name = DATE_FROM, required = false) @DateTimeFormat(pattern = "YYYY-MM-dd HH:mm") final LocalDateTime from,
+            @RequestParam(name = DATE_TO, required = false) @DateTimeFormat(pattern = "YYYY-MM-dd HH:mm") final LocalDateTime to,
+            @RequestParam(name = MIN_AMOUNT, required = false) final BigDecimal minAmount,
+            @RequestParam(name = MAX_AMOUNT, required = false) final BigDecimal maxAmount,
+            final Boolean ascending
     ) {
         throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
     }

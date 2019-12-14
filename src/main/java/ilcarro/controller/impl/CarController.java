@@ -8,7 +8,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import static ilcarro.dto.Constants.*;
 
-@RestController("/v2")
+@RestController
 @CrossOrigin(origins = "*")
 @Api(tags = {"Car controller (Add/Update/Delete a car)"})
 public class CarController {
@@ -21,7 +21,7 @@ public class CarController {
             @ApiResponse(code = 403, message = "Forbidden"),
             @ApiResponse(code = 409, message = "Conflict")
     })
-    public ResponseEntity<CarFullView> addCar (@RequestBody CarView carView) {
+    public ResponseEntity<CarFullView> addCar (@RequestBody final CarView carView) {
         throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
     }
 
@@ -33,7 +33,7 @@ public class CarController {
             @ApiResponse(code = 401, message = "Unauthorized"),
             @ApiResponse(code = 409, message = "Conflict")
     })
-    public ResponseEntity<CarFullView> updateCar (@RequestParam(name = SERIAL_NUMBER) final String serialNumber, @RequestBody CarView carView) {
+    public ResponseEntity<CarFullView> updateCar (@RequestParam(name = SERIAL_NUMBER) final String serialNumber, @RequestBody final CarView carView) {
         throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED);
     }
 
