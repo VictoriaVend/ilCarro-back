@@ -8,18 +8,24 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-@RestController
-//@CrossOrigin(origins = "*")
-@RequestMapping(value = "/user/login", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-@Api(tags = {"UserLogin"})
-public class UserLoginController {
-        @GetMapping(value = "/")
-        @ApiOperation(value = "login", response = UserFullView.class, tags = {"UserLogin"})
-        @ApiResponses(value = {@ApiResponse(code = 200, message = "OK"), @ApiResponse(code = 401, message = "Unauthorized")
-        })
-        public ResponseEntity<UserFullView> getCurrentCapacityById (@RequestBody final UserFullView userView) {
-            throw new NotImplementedException();
-        }
-    }
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+
+@RestController
+@CrossOrigin(origins = "*")
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+@Api(tags = {"login"})
+public class UserLoginController {
+    @GetMapping(value = "/user/login")
+    @ApiOperation(value = "Login user", response = UserFullView.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "OK"),
+            @ApiResponse(code = 401, message = "Unauthorized")
+    })
+    public ResponseEntity<UserFullView> getCurrentCapacityById () {
+        throw new NotImplementedException();
+    }
+}

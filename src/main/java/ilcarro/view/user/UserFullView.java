@@ -2,7 +2,7 @@ package ilcarro.view.user;
 
 import ilcarro.view.car.BookedCarView;
 import ilcarro.view.car.OwnCarView;
-import ilcarro.view.comment.CommentView;
+import ilcarro.view.comments.CommentView;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;

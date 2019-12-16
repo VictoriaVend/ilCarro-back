@@ -23,7 +23,7 @@ public class RegistrationController {
             @ApiResponse(code = 200, message = "OK"),
             @ApiResponse(code = 409, message = "Conflict")
     })
-    public ResponseEntity<UserFullView> getCurrentCapacityById(@RequestBody final UserView userView) {
+    public ResponseEntity<UserFullView> getCurrentCapacityById (@RequestBody final UserView userView) {
         throw new NotImplementedException();
     }
 }
