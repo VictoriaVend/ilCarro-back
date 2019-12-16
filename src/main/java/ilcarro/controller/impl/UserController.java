@@ -1,16 +1,15 @@
 package ilcarro.controller.impl;
 
 import ilcarro.exception.NotImplementedException;
-import ilcarro.view.period.BookPeriodsView;
+import ilcarro.view.car.OwnCarView;
+import ilcarro.view.period.BookedPeriodView;
 import ilcarro.view.user.*;
 import io.swagger.annotations.*;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-@SpringBootApplication
 @RestController
 @CrossOrigin(origins="*")
 @RequestMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -64,14 +63,14 @@ public class UserController {
     }
 
     @GetMapping("user/cars/periods")
-    @ApiOperation(value = "Get owner booked periods by car", response = BookPeriodsView.class, tags = {"user"})
+    @ApiOperation(value = "Get owner booked periods by car", response = BookedPeriodView.class, tags = {"user"})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "OK"),
             @ApiResponse(code = 400, message = "Unauthorized"),
             @ApiResponse(code = 404, message = "Not Found"),
             @ApiResponse(code = 409, message = "Conflict")
     })
-    public ResponseEntity<BookPeriodsView> ownerGetBookedPeriodsByCarId(@RequestParam ("serial_number") String serialNumber)
+    public ResponseEntity<BookedPeriodView> ownerGetBookedPeriodsByCarId(@RequestParam ("serial_number") String serialNumber)
     {
         throw new NotImplementedException();
     }

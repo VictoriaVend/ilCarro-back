@@ -18,9 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 
 @RestController
-@RequestMapping(value = "/search", params = {"city", "start_date", "end_date", "min_amount", "max_amount", "ascending",
-                                            "items_on_page", "current_page", "latitude", "longitude", "radius", "make", "model",
-                                            "year", "engine", "fuel", "gear", "wheels_drive"},
+@RequestMapping(value = "/search",
                 consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public class SearchController {
     @GetMapping("/search")

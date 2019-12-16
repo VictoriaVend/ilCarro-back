@@ -1,8 +1,7 @@
 package ilcarro.controller.impl;
 
 import ilcarro.exception.NotImplementedException;
-import ilcarro.view.comment.CommentShortView;
-import io.swagger.annotations.Api;
+import ilcarro.view.comments.CommentShortView;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
